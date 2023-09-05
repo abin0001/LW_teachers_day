@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Happy Teacher's Day</title>
+    <script src="https://kit.fontawesome.com/e19484dcd7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted poster="./static/a.png">
+        <source src="./static/a.png" type="video/mp4">
+      </video>
+    <h1 class="title">Team LiveWires_ Whishes you,<br> Happy Teacher's day</h1>
+    <div class="card">
+        <div class="imgBox">
+            <img src="/static/post.jpg">
+            <img src="{{ url_for('static', filename= image) }}", alt="">
+            
+        </div>
+        <div class="details">
+            <div class="content">
+                <p class="name">Dear {{name}},</p><p class="p2">{{qoute}}</p><br>
+                <h2 class="h2">{{ msg }}</h2>
+        </div>
+        
+        </div>
+        <h1 class="click">Touch the card</h1>
+    </div>
+    
+</body>
+</html>

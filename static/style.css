@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tangerine', cursive;
+    font-weight: bolder;
+    font-size: xx-large;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fbe9e7;
+
+}
+.card{
+    position: relative;
+    margin-top: 50px;
+    width: 450px;
+    height: 600px;
+    background:#fff ;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow:10px 20px 40px rgba(0,0,0,0.25) ;
+    border-radius:15px;
+
+    
+}
+.card:hover{
+    transform :translateX(50%);
+}
+.card .imgBox{
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style:preserve-3d;
+    background-color: #fff;
+    transition: 1.5s;
+}
+.card:hover .imgBox{
+transform: rotateY(-180deg);
+
+}
+.card .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit:cover;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    
+
+}
+.card .imgBox img:nth-child(2){
+    width: 90%;
+    height: 90%;
+    margin: 20px;
+    border-radius: 15px;
+    border-color: goldenrod;
+    border-style: solid;
+    transform: rotateY(180deg);
+}
+.card .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .details .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding:20px;
+    justify-content:center;
+    align-items: justify;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    border-color: goldenrod;
+    border-style:solid;
+    font-weight: bold;
+    font-family: 'Tangerine', cursive;
+    font-weight: bolder;
+    font-size:100px;
+}
+.card .details .content .name{
+    font-family: 'Tangerine', cursive;
+    font-weight: bolder;
+    font-size:50px;
+    text-align:center;
+    margin: 10px;
+    margin-bottom: 10px;
+}
+.card .details .content h2{
+    text-align: center;
+    font-weight: 700;
+    line-height: 1em;
+    justify-content: center;
+    
+    font-family: 'Tangerine', cursive;
+    font-weight: bolder;
+    font-size:40px;
+}
+.card .details .content .p2{
+    
+    font-family: 'Tangerine', cursive;
+    font-weight: bolder;
+    font-size:40px;
+    text-align: justify;
+}
+body .title{
+    position: absolute;
+    top:20px;
+    height: fit-content;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bolder;
+    font-size:40px;
+    color: rgb(0, 0, 0);
+    width: fit-content;
+
+}
+
+/* For  background video */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            opacity:0.9;
+        }
+
+
+body .click{
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+}
+@media screen and (max-width: 480px) {
+    body {
+        font-size: medium;
+    }
+
+    .card{
+        width: 320px; 
+        height:420px;
+    }
+    .card:hover{
+        width: 180px; 
+        height:420px;
+        transition:1.5s;
+    }
+
+    .card:hover {
+        transform:translateZ(100)
+    }
+
+    .card .details .content {
+        font-size:10px;
+        width:fit-content;
+        height:420px;
+    }
+    .card .details .content h2{
+        font-family:'Courier New', Courier, monospace;
+        font-size: 12px;
+        text-align:center;
+        font-weight: bolder;
+    }
+    .card .details .content .p2{
+        font-family:'Courier New', Courier, monospace;
+        font-size: 12px;
+    }
+    .card .details .content .name{
+        font-family:'Courier New', Courier, monospace;
+        font-size:16px;
+        /* text-align: justif; */
+        font-weight: bolder;
+    }
+    .card .imgBox img:nth-child(2){
+        width:100%;
+        height: 100%;
+        margin: 0;
+    }
+    .card .details{
+        padding: 0;
+    }
+}
